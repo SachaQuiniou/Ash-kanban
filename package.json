@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "db:create:sequelize": "node server/src/database/migrations/createTables.js",
+    "db:seed:sequelize": "node server/src/database/migrations/seedTables.js",
     "db:create:sql": "psql -U ashkanban < server/data/create_tables.sql",
     "db:seed": "psql -U ashkanban < server/data/seed_tables.sql",
     "db:reset": "pnpm run db:create:sql && pnpm run db:seed"
