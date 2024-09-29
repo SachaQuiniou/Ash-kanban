@@ -4,7 +4,11 @@
   "description": "projet personnel-réalisation d'un kanban de gestion de projet",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "db:create:sql": "psql -U ashkanban < server/data/create_tables.sql",
+    "db:seed": "psql -U ashkanban < server/data/seed_tables.sql",
+    "db:reset": "pnpm run db:create:sql && pnpm run db:seed"
   },
   "type": "module",
   "keywords": ["kanban, projet"],
