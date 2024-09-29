@@ -1,0 +1,53 @@
+{
+  "name": "ash-kanban",
+  "version": "0.0.1",
+  "description": "projet personel-réalisation d'un kanban de gestion de projet",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "keywords": ["kanban, projet"],
+  "author": "Sacha",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "pg": "^8.13.0",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.1",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "overrides": [
+      {
+        "files": "*.js",
+        "options": {
+          "parser": "babel"
+        }
+      },
+      {
+        "files": "*.json",
+        "options": {
+          "parser": "json",
+          "tabWidth": 2
+        }
+      }
+    ],
+    "semi": true,
+    "requirePragma": false,
+    "proseWrap": "preserve",
+    "arrowParens": "avoid",
+    "htmlWhitespaceSensitivity": "css",
+    "quoteProps": "as-needed"
+  }
+}
