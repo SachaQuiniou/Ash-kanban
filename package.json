@@ -1,7 +1,7 @@
 {
   "name": "ash-kanban",
   "version": "0.0.1",
-  "description": "projet personel-réalisation d'un kanban de gestion de projet",
+  "description": "projet personnel-réalisation d'un kanban de gestion de projet",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
