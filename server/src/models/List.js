@@ -8,7 +8,7 @@ List.init(
         title: {
             type: DataTypes.TEXT,
             validate: {
-                len: [6, 55],
+                len: [4, 55],
             },
             allowNull: false,
         },

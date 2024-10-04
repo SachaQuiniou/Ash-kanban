@@ -13,13 +13,17 @@
     "db:reset": "pnpm run db:create:sql && pnpm run db:seed"
   },
   "type": "module",
-  "keywords": ["kanban, projet"],
+  "keywords": [
+    "kanban, projet"
+  ],
   "author": "Sacha",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "joi": "^17.13.3",
     "pg": "^8.13.0",
+    "sanitize-html": "^2.13.1",
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
