@@ -63,7 +63,7 @@ export const listController = {
         }
 
         const updatedList = await listUpdate.update({
-            title: title || listUpdate.title,
+            title: sanitize(title) || listUpdate.title,
             position: position || listUpdate.position,
         });
 

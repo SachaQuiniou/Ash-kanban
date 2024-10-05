@@ -1,7 +1,6 @@
 import Joi from 'joi';
 import sanitize from 'sanitize-html';
 import { Card, List } from '../models/associations.js';
-import { col } from 'sequelize';
 
 export const cardController = {
     async index(req, res) {
