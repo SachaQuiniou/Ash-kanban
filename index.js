@@ -5,8 +5,20 @@ import {
     errorHandler,
     notFound,
 } from './server/src/middlewares/errorHandlers.js';
+import cors from 'cors';
 
 const app = express();
+
+app.use(
+    cors({
+        origin: [
+            'http://localhost',
+            'http://127.0.0.1',
+            'http://127.0.0.1:5173',
+            'http://localhost:5173',
+        ],
+    })
+);
 
 app.use(express.json());
 
