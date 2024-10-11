@@ -1,9 +1,13 @@
-function App() {
+import { Header } from "../Header/Header";
+import { List } from "../List/List";
+
+export function App() {
 	return (
 		<>
-			<h1 className="text-4xl">Ash'Kanban</h1>
+			<main className="m-24 max-w-full">
+				<Header />
+				<List />
+			</main>
 		</>
 	);
 }
-
-export default App;
