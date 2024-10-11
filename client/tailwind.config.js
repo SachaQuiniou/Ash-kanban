@@ -1,3 +1,5 @@
+import { Container } from "postcss";
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -10,10 +12,11 @@ export default {
         },
         extend: {
             colors: {
-                background: "#e4e4e7",
-                primary: "#18181b",
-                secondary: "#22c55e",
-                card: "#27272a",
+                background: "#1c1917",
+                primary: "#E0E0E0",
+                secondary: "#193B2D",
+                list: "#E8E8E8",
+                card: "#F0F0F0",
             },
         },
     },
