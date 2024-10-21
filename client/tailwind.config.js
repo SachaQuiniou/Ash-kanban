@@ -1,5 +1,3 @@
-import { Container } from "postcss";
-
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -17,6 +15,15 @@ export default {
                 secondary: "#193B2D",
                 list: "#E8E8E8",
                 card: "#F0F0F0",
+            },
+            animation: {
+                "fill-bar": "fill 0.5s linear infinite",
+            },
+            keyframes: {
+                fill: {
+                    "0%": { width: "0%" },
+                    "100%": { width: "100%" },
+                },
             },
         },
     },

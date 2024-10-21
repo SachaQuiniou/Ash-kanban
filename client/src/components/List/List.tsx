@@ -1,15 +1,20 @@
+import { ProgressBar } from "../ProgressBar/ProgressBar";
+
 import type { Ilists } from "../../@types";
 
 interface listProps {
 	lists: Ilists[];
+	listsLoading: boolean;
 }
 
-export function List({ lists }: listProps) {
+export function List({ lists, listsLoading }: listProps) {
 	return (
 		<section
 			id="list-container"
 			className="flex gap-2 flex-wrap mt-1 p-2 bg-primary rounded-md "
 		>
+			{!listsLoading && <ProgressBar />}
+
 			{lists.map((list) => (
 				<div
 					key={list.id}
