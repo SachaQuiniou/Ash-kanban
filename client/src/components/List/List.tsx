@@ -1,61 +1,54 @@
-import { Card } from "../Card/Card";
+import type { Ilists } from "../../@types";
 
-export function List() {
+interface listProps {
+	lists: Ilists[];
+}
+
+export function List({ lists }: listProps) {
 	return (
 		<section
 			id="list-container"
 			className="flex gap-2 flex-wrap mt-1 p-2 bg-primary rounded-md "
 		>
-			<div
-				id="list"
-				className="bg-list flex flex-col gap-4 p-4 w-96 rounded-md shadow shadow-secondary"
-			>
-				<div>
-					<h2 className=" text-2xl text-secondary">Sprint 1</h2>
-				</div>
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-			</div>
-
-			<div
-				id="list"
-				className="bg-list flex flex-col gap-4 p-4 w-96 rounded-md shadow shadow-secondary"
-			>
-				<div className="flex justify-between items-center">
-					<h2 className="text-2xl text-secondary">Sprint 2</h2>
-					<div id="icons" className="flex gap-2">
-						<button
-							type="button"
-							title="Modifier la liste"
-							aria-label="Modifier la liste"
-						>
-							<svg
-								className="icon text-xl text-secondary hover:text-secondary/40 ease-in-out duration-300 hover:scale-125"
-								aria-labelledby="icon-pencil-title"
+			{lists.map((list) => (
+				<div
+					key={list.id}
+					id="list"
+					className="bg-list flex flex-col gap-4 p-4 w-96 rounded-md shadow shadow-secondary"
+				>
+					<div className="flex justify-between items-center">
+						<h2 className="text-2xl text-secondary">{list.title}</h2>
+						<div id="icons" className="flex gap-2">
+							<button
+								type="button"
+								title="Modifier la liste"
+								aria-label="Modifier la liste"
 							>
-								<title id="icon-pencil-title">Modifier la liste</title>
-								<use xlinkHref="#icon-pencil" />
-							</svg>
-						</button>
-						<button
-							type="button"
-							title="Supprimer la liste"
-							aria-label="Supprimer la liste"
-						>
-							<svg
-								className="icon text-xl text-secondary hover:text-secondary/40 ease-in-out duration-300 hover:scale-125"
-								aria-labelledby="icon-bin-title"
+								<svg
+									className="w-6 h-6 text-secondary hover:text-secondary/40 ease-in-out duration-300 hover:scale-125"
+									aria-labelledby="icon-pencil-title"
+								>
+									<use xlinkHref="/assets/icons/SVG/symbol-defs.svg#icon-pencil" />
+									<title id="icon-pencil-title">Modifier la liste</title>
+								</svg>
+							</button>
+							<button
+								type="button"
+								title="Supprimer la liste"
+								aria-label="Supprimer la liste"
 							>
-								<title id="icon-bin-title">Supprimer la liste</title>
-								<use xlinkHref="#icon-bin" />
-							</svg>
-						</button>
+								<svg
+									className="w-6 h-6 text-secondary hover:text-secondary/40 ease-in-out duration-300 hover:scale-125"
+									aria-labelledby="icon-bin-title"
+								>
+									<title id="icon-bin-title">Supprimer la liste</title>
+									<use xlinkHref="/assets/icons/SVG/symbol-defs.svg#icon-bin" />
+								</svg>
+							</button>
+						</div>
 					</div>
 				</div>
-				<Card />
-			</div>
+			))}
 
 			<div
 				id="list"
